@@ -9,14 +9,14 @@ resource "ibm_schematics_workspace" "workspace" {
   location = local.ibm_region
 
   template_inputs {
-    name  = "workspace_name"
-    type  = "string"
-    value = "${var.workspace_name}-managed"
-  }
-
-  template_inputs {
     name  = "resource_group"
     type  = "string"
     value = var.resource_group_name
+  }
+
+  template_inputs {
+    name  = "workspace_name"
+    type  = "string"
+    value = "${var.workspace_name}-managed"
   }
 }
