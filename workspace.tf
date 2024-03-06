@@ -13,4 +13,10 @@ resource "ibm_schematics_workspace" "workspace" {
     type  = "string"
     value = var.resource_group_name
   }
+
+  template_inputs {
+    name  = "workspace_name"
+    type  = "string"
+    value = "${var.workspace_name}-managed"
+  }
 }
